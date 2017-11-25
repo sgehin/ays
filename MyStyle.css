@@ -147,6 +147,19 @@ input{
     margin-top: 10px;
     
 }
+div.radiobutton{
+    height: 20px;
+}
+#radiobuttonNote{
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+   }
+label{
+    font-style: bolt;
+    margin-top: 7px;
+}
 textarea{
     background-color : #58AFCB; 
     height: 20%;

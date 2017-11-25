@@ -49,6 +49,9 @@
                                 <div class="column right" id="searchbox">
                                     <input type="text" id="searchsubject" name="subject">
                                     <i class="fa fa-search" id="loop" style="font-size:24px;color:#FFD427" onmouseover="bigImg(this)" onmouseout="normalImg(this)" onclick="test()"></i>
+                                    <div name="radiobutton">
+                                        <input type="radio" id="radiobuttonNote"><label>notes</label>   
+                                    </div>
 
 
                                 </div>                                
