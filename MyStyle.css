@@ -1,0 +1,120 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-image: url(img/bleu1.jpg);
+    height: auto;
+    width: 100%;
+}
+#welkom{   
+    padding-top: 100px;
+    text-align: center;
+    float: bottom   
+}
+/*                              Style the header */
+.header {
+    opacity: 0.9;
+    background-color: #A3CEF0;    
+    padding: 15px;
+    text-align: center;
+    height:110px;
+}
+#head{
+    color: #030F29;
+}
+#pen{
+    padding-right: 20px;
+    float: right;
+    height: 32%;
+    width: 32%;
+}
+/*                              NavBAr */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0D2144;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #1D3E71;
+}
+.active {
+    background-color: #FFCC48;
+}
+#spaceline{
+    height: 35px;   
+}
+h1 {
+    color: white;
+    font-size: 40px;
+    margin: auto;
+}
+h2 {
+    color: white;
+}
+#index{
+    width: 1580px;
+}
+.column {
+    float: left;
+}
+/*                              Left mid and right column */
+.column.side {
+    opacity: 0.5;
+    background-color: #ffffcc;
+    width: 23%;
+    height: 550px;
+    margin: 5px;
+    padding-left: 10px;
+    align-content: center;
+    border-style: solid;
+    border-radius: 20px;
+    border: 5px solid #0D2144;
+}
+/*                              Middle column */
+.column.middle {
+    opacity: 0.7;
+    background-color: #ffffcc;
+    width: 53%;
+    height: 550px;
+    margin: 5px;
+    padding-left: 10px;
+    align-content: center;
+    border-style: solid;
+    border-radius: 20px;
+    border: 5px solid #0D2144;
+}
+/*                              right column */
+.column.right {
+    opacity: 0.5;
+    background-color: #ffffcc;
+    width: 22%;
+    height: 550px;
+    margin: 5px;
+    padding-left: 10px;
+    align-content: center;
+    border-style: solid;
+    border-radius: 20px;
+    border: 5px solid #0D2144;
+}
+/*                              input */
+input{
+    background-color : #ffcc48; 
+    height: 30px;
+    border-radius: 10px
+}
+
+
