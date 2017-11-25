@@ -1,4 +1,7 @@
-
+function sendsave(){
+    alert()
+    document.forms["inputNote"].submit();
+}
 
 function test(){
     var someText = "Hier worden de aantekeningen ingevoerd";
