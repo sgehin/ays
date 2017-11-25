@@ -6,25 +6,12 @@
         <link rel="shortcut icon" href="img/inlogpic.png">
         <link rel="stylesheet" type="text/css" href="MyStyle.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="headscript.js"></script>
+        <script src="script.js"></script>
         <title>@ YOUR SERVICE</title>
     </head>
     <script>
-        function test() {
-            var someText = "Hier worden de aantekeningen ingevoerd";
-            document.getElementById("inputsubject").value = "Subject";
-            document.getElementById("inputnote").value = someText;
-            document.getElementById("generalbox").innerHTML = "<br><h2 class=test>ALGEMEEN</h2>";
-        }
-        function bigImg(x) {
-            x.style.font = "26px";
-            x.style.color = "green";
-        }
-        function normalImg(x) {
-            x.style.font= "24px";
-            x.style.color = "#FFD427";
-        }
-        </script>
+
+    </script>
     <body>
         <div class="header">
             <h1 id="head">@ YOUR SERVICE</h1>
@@ -34,26 +21,65 @@
                             <li><a class="active" href=index.php>Home</a></li>
                             <li><a href=workplace.php>Workplace</a></li> 
                         </ul>       
-                        <div id="spaceline">
-                        </div>
+                        <div id="spaceline"></div>
                         <colum><div class="row">
                                 <div class="column left" id="generalbox">
-                                    <button onclick="test()">test</button>
-                                    <br>
-                                    hallo
+
+
+
+                                    <!-- generalbox left -->   
+                                    <div class="genLeft">
+                                        <div id="dropdownn">
+                                            <ul id="selectbox">
+                                                <li class="li">Coffee xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                                                <li class="li">Tea</li>
+                                                <li class="li">Milk</li>
+                                            </ul>     
+
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- generalbox right -->
+
+                                    <div class="genRightUp">
+                                        <div id="trashSubject">
+                                            <i class="fa fa-floppy-o" style="font-size:20px;color:#4286A1"onmouseover="bigSave(this)" onmouseout="normalSave(this)"></i>
+                                            <br><br>
+                                        </div>
+                                        <div id="saveSubject">
+                                        </div>
+                                        <i class="fa fa-trash" style="font-size:20px;color:#4286A1"onmouseover="bigTrash(this)" onmouseout="normalTrash(this)"></i>
+                                    </div>
+                                    <div class="genRightDn">
+                                        <div id="trashSubject">
+                                            <i class="fa fa-floppy-o" style="font-size:20px;color:#4286A1"onmouseover="bigSave(this)" onmouseout="normalSave(this)"></i>
+                                            <br><br>
+                                        </div>
+                                        <div id="saveSubject">
+                                        </div>
+                                        <i class="fa fa-trash" style="font-size:20px;color:#4286A1"onmouseover="bigTrash(this)" onmouseout="normalTrash(this)"></i>
+                                        </d     iv>
+                                    </div>    
                                 </div>
+                                <!-- displaybox -->  
                                 <div class="column middle" id="displaybox">
                                     <textarea type="text" id="inputsubject" name="subject"></textarea>
                                     <textarea type="text" id="inputnote" name="note" value="deze text moet vervangen worden"></textarea>
                                 </div>
+                                <!-- searchbox -->  
                                 <div class="column right" id="searchbox">
-                                    <input type="text" id="searchsubject" name="subject">
-                                    <i class="fa fa-search" id="loop" style="font-size:24px;color:#FFD427" onmouseover="bigImg(this)" onmouseout="normalImg(this)" onclick="test()"></i>
                                     <div name="radiobutton">
-                                        <input type="radio" id="radiobuttonNote"><label>notes</label>   
+                                        <input type="radio" id="radiobuttonNote"><label>notes</label>                  
                                     </div>
+                                    <input type="text" id="searchsubject" name="subject">
+                                    <i class="fa fa-search" id="loop" style="font-size:20px;color:#4286A1" onmouseover="bigLoop(this)" onmouseout="normalLoop(this)" onclick="test()"></i>
+                                    <div class="searchResult">
+                                        <textarea type="text" id="selectArea" name="selectSearch"></textarea>
 
-
+                                    </div>    
                                 </div>                                
                                 </body>
                                 </html>

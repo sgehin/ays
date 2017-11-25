@@ -2,7 +2,7 @@
 
 
 <?php include 'general.php'; 
-// subgoal make radiobutton layout in div searchbox
+// subgoal layout div general
 
 ?>
 <html lang="en">

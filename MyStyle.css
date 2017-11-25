@@ -57,6 +57,7 @@ li a:hover:not(.active) {
 #spaceline{
     height: 20px;   
 }
+/*                              text formatting */
 h1 {
     color: white;
     font-size: 40px;
@@ -77,7 +78,7 @@ h2 {
 }
 /*                              Left mid and right column */
 .column.left {
-    opacity: 0.5;
+    opacity: 0.8;
     background-color: #ffffcc;
     width: 23%;
     height: 585px;
@@ -109,7 +110,7 @@ h2 {
 }
 /*                              right column */
 .column.right {
-    opacity: 0.5;
+    opacity: 0.8;
     background-color: #ffffcc;
     width: 22%;
     height: 585px;
@@ -147,19 +148,39 @@ input{
     margin-top: 10px;
     
 }
+/*                              searchbox */
+.searchResult{
+    height: 100%;
+    width: 100%;      
+}
+#selectArea{
+    margin-top: 20px;
+    background-color : #D3D6BE; 
+    height: 77%;
+    width: 100%;    
+    border-radius: 10px; 
+    padding: 5px;
+    word-wrap: break-word;
+}    
 div.radiobutton{
     height: 20px;
+    margin-bottom: 10px;
 }
 #radiobuttonNote{
     height: 15px;
     width: 15px;
     margin-right: 10px;
     margin-top: 10px;
+    margin-bottom: 50px;
    }
 label{
     font-style: bolt;
     margin-top: 7px;
 }
+#searchResult{
+    font-size: 15px;
+}
+/*                              displaybox  */
 textarea{
     background-color : #58AFCB; 
     height: 20%;
@@ -171,4 +192,51 @@ textarea{
 #displaybox{
     padding-top: 100 px;
 }
-
+#inputsubject{
+    font-size: 30px;
+    font-weight: bold;
+}
+#inputnote{
+    font-size: 18px;
+}
+/*                              generalbox left */
+.genLeft{
+    padding: 5px;
+    float: left;
+    height: 80%;
+    width: 90%;
+}
+#selectbox{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #D3D6BE;
+    height: 545px;
+    border-right: solid;
+    border-color:#3F809A;
+    word-wrap: break-word;
+}
+.li{
+    float: none;
+}
+/*                              generalbox right */
+.genRightUp{
+  background-color: #CCE1F1;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  float:right;
+  width: 5%;
+}
+.genRightDn{
+  background-color: #CCE1F1;
+  border-radius: 10px;
+  margin-top: 70px;  
+  padding-left: 5px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  float:right;
+  width: 5%;
+}
