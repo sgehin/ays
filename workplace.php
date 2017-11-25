@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="img/inlogpic.png">
         <link rel="stylesheet" type="text/css" href="MyStyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="headscript.js"></script>
         <title>@ YOUR SERVICE</title>
     </head>
@@ -15,7 +16,15 @@
             document.getElementById("inputnote").value = someText;
             document.getElementById("generalbox").innerHTML = "<br><h2 class=test>ALGEMEEN</h2>";
         }
-    </script>
+        function bigImg(x) {
+            x.style.font = "26px";
+            x.style.color = "green";
+        }
+        function normalImg(x) {
+            x.style.font= "24px";
+            x.style.color = "#FFD427";
+        }
+        </script>
     <body>
         <div class="header">
             <h1 id="head">@ YOUR SERVICE</h1>
@@ -29,6 +38,7 @@
                         </div>
                         <colum><div class="row">
                                 <div class="column left" id="generalbox">
+                                    <button onclick="test()">test</button>
                                     <br>
                                     hallo
                                 </div>
@@ -37,8 +47,10 @@
                                     <textarea type="text" id="inputnote" name="note" value="deze text moet vervangen worden"></textarea>
                                 </div>
                                 <div class="column right" id="searchbox">
-                                    <br>
-                                    <button onclick="test()">test</button>
+                                    <input type="text" id="searchsubject" name="subject">
+                                    <i class="fa fa-search" id="loop" style="font-size:24px;color:#FFD427" onmouseover="bigImg(this)" onmouseout="normalImg(this)" onclick="test()"></i>
+
+
                                 </div>                                
                                 </body>
                                 </html>

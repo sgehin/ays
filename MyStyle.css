@@ -83,6 +83,9 @@ h2 {
     height: 585px;
     margin: 5px;
     padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     align-content: center;
     border-style: solid;
     border-radius: 20px;
@@ -112,6 +115,9 @@ h2 {
     height: 585px;
     margin: 5px;
     padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     align-content: center;
     border-style: solid;
     border-radius: 20px;
@@ -125,6 +131,14 @@ input{
     border-radius: 10px; 
     padding: 5px;
     word-wrap: break-word;
+}
+#searchsubject{
+    background-color : #58AFCB; 
+    height: 5%;
+    width: 90%;    
+    border-radius: 10px; 
+    padding: 5px;
+    color: white;
 }
 #inputnote{
     height: 77%;

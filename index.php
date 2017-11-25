@@ -2,7 +2,7 @@
 
 
 <?php include 'general.php'; 
-// subgoal button on one area changes content on different div's with javascript
+// subgoal make searchbar layout in div searchbox
 
 ?>
 <html lang="en">
