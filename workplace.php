@@ -9,36 +9,36 @@
         <title>@ YOUR SERVICE</title>
     </head>
     <script>
-        function test(){
-            
-  
-    document.getElementById("displaybox").innerHTML = "<br><h2 class=test>INVOERSCHERM</h2>";
-    document.getElementById("generalbox").innerHTML = "<br><h2 class=test>ALGEMEEN</h2>";
+        function test() {
+            var someText = "Hier worden de aantekeningen ingevoerd";
+            document.getElementById("inputsubject").value = "Subject";
+            document.getElementById("inputnote").value = someText;
+            document.getElementById("generalbox").innerHTML = "<br><h2 class=test>ALGEMEEN</h2>";
         }
     </script>
     <body>
         <div class="header">
             <h1 id="head">@ YOUR SERVICE</h1>
             <h2 id="head"><span>Sebastien<span></h2>
-        </div>
-        <ul>
-            <li><a class="active" href=index.php>Home</a></li>
-            <li><a href=workplace.php>Workplace</a></li> 
-        </ul>       
-        <div id="spaceline">
-        </div>
-    <colum><div class="row">
-            <div class="column left" id="generalbox">
-                <br>
-                hallo
-            </div>
-            <div class="column middle" id="displaybox">
-                 <br>
-                zooo
-            </div>
-            <div class="column right" id="searchbox">
-                 <br>
-                 <button onclick="test()">test</button>
-            </div>
-            </body>
-            </html>
+                        </div>
+                        <ul>
+                            <li><a class="active" href=index.php>Home</a></li>
+                            <li><a href=workplace.php>Workplace</a></li> 
+                        </ul>       
+                        <div id="spaceline">
+                        </div>
+                        <colum><div class="row">
+                                <div class="column left" id="generalbox">
+                                    <br>
+                                    hallo
+                                </div>
+                                <div class="column middle" id="displaybox">
+                                    <textarea type="text" id="inputsubject" name="subject"></textarea>
+                                    <textarea type="text" id="inputnote" name="note" value="deze text moet vervangen worden"></textarea>
+                                </div>
+                                <div class="column right" id="searchbox">
+                                    <br>
+                                    <button onclick="test()">test</button>
+                                </div>                                
+                                </body>
+                                </html>

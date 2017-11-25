@@ -2,7 +2,7 @@
 
 
 <?php include 'general.php'; 
-// subgoal change innerHTML of id=invoerscherm with js
+// subgoal button on one area changes content on different div's with javascript
 
 ?>
 <html lang="en">
