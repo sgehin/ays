@@ -2,7 +2,7 @@
 
 
 <?php include 'general.php'; 
-// subgoal layout div general
+// subgoal: create database ays with table "subject" & "note"
 
 ?>
 <html lang="en">

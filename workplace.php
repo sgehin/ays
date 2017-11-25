@@ -24,26 +24,17 @@
                         <div id="spaceline"></div>
                         <colum><div class="row">
                                 <div class="column left" id="generalbox">
-
-
-
                                     <!-- generalbox left -->   
                                     <div class="genLeft">
                                         <div id="dropdownn">
                                             <ul id="selectbox">
-                                                <li class="li">Coffee xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                                                <li class="li">Coffee xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
                                                 <li class="li">Tea</li>
                                                 <li class="li">Milk</li>
                                             </ul>     
-
                                         </div>
                                     </div>
-
-
-
-
                                     <!-- generalbox right -->
-
                                     <div class="genRightUp">
                                         <div id="trashSubject">
                                             <i class="fa fa-floppy-o" style="font-size:20px;color:#4286A1"onmouseover="bigSave(this)" onmouseout="normalSave(this)"></i>
