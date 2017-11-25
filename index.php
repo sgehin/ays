@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 
-<?php include 'general.php'; ?>
+
+<?php include 'general.php'; 
+// subgoal change innerHTML of id=invoerscherm with js
+
+?>
 <html lang="en">
     <head>
         <meta charset="UTF-8">

@@ -8,6 +8,14 @@
         <script src="headscript.js"></script>
         <title>@ YOUR SERVICE</title>
     </head>
+    <script>
+        function test(){
+            
+  
+    document.getElementById("displaybox").innerHTML = "<br><h2 class=test>INVOERSCHERM</h2>";
+    document.getElementById("generalbox").innerHTML = "<br><h2 class=test>ALGEMEEN</h2>";
+        }
+    </script>
     <body>
         <div class="header">
             <h1 id="head">@ YOUR SERVICE</h1>
@@ -20,35 +28,17 @@
         <div id="spaceline">
         </div>
     <colum><div class="row">
-            <div class="column side">
-                <table id=index>
-                    <tr>
-                        <td>
-                            <h3>reserved</h3>
-                            <p color="white">datum ect </p>
-                        </td>
-                    </tr>
-                </table>
+            <div class="column left" id="generalbox">
+                <br>
+                hallo
             </div>
-            <div class="column middle">
-                <table id=index2>
-                    <tr>
-                        <td>
-                <h3>invoerscherm</h3>
-                <p>hier worden de aantekeningen ingevoerd en gesubmit</p>
-                 </td>
-                    </tr>
-                </table>
+            <div class="column middle" id="displaybox">
+                 <br>
+                zooo
             </div>
-            <div class="column right">
-                <table id=index2>
-                    <tr>
-                        <td>
-                <h3>zoekscherm</h3>
-                <p>zoek items</p>
-                 </td>
-                    </tr>
-                </table>
+            <div class="column right" id="searchbox">
+                 <br>
+                 <button onclick="test()">test</button>
             </div>
             </body>
             </html>

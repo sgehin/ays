@@ -65,6 +65,10 @@ h1 {
 h2 {
     color: white;
 }
+.test{
+    padding-left: 10px;
+    color: red;
+}
 #index{
     width: 1580px;
 }
@@ -72,7 +76,7 @@ h2 {
     float: left;
 }
 /*                              Left mid and right column */
-.column.side {
+.column.left {
     opacity: 0.5;
     background-color: #ffffcc;
     width: 23%;
