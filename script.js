@@ -1,4 +1,4 @@
-function sendsave(){
+function saveNote(){
     alert()
     document.forms["inputNote"].submit();
 }
