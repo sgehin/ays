@@ -1,5 +1,6 @@
 <?php
 
+
 // connect to database
 function connectDB() {
             $hostname = 'localhost';
@@ -13,14 +14,13 @@ function connectDB() {
                 return $conn;
                
 }
-//  neutrolize strange characters
+// check vreemde characters en code
 function mysql_entities_fix_string($conn, $string) {
             return htmlentities(mysql_fix_string($conn, $string));
 }
-// neutrolize code characters   
 function mysql_fix_string($conn, $string) {
-            if (get_magic_quotes_gpc()){
+            if (get_magic_quotes_gpc())
                 $string = stripcslashes($string);
             return $conn->real_escape_string($string);
-            }
 }
+?>
