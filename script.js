@@ -1,6 +1,15 @@
 function saveNote(){
-    alert()
-    document.forms["inputNote"].submit();
+    var checkSubject
+    var checkNote
+    checkSubject = document.getElementById("inputsubject").value
+    if (checkSubject==""){
+        document.getElementById("inputsubject").value = "Subject is required to save your notes";
+        setTimeout(function(){ document.getElementById("inputsubject").value = ""; }, 3000);
+        document.location('workplace.php');
+    } else {document.getElementById("inputsubject").value = checkSubject+"return";  
+        }
+   
+       //document.forms["inputNote"].submit();
 }
 
 function test(){
