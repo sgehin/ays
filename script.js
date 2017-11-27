@@ -1,15 +1,20 @@
-function saveNote(){
+function saveNote() {
     var checkSubject
     var checkNote
-    checkSubject = document.getElementById("inputsubject").value
-    if (checkSubject==""){
-        document.getElementById("inputsubject").value = "Subject is required to save your notes";
-        setTimeout(function(){ document.getElementById("inputsubject").value = ""; }, 3000);
-        document.location('workplace.php');
-    } else {document.getElementById("inputsubject").value = checkSubject+"return";  
-        }
-   
-       //document.forms["inputNote"].submit();
+    checkSubject = document.getElementById("inputsubject").value;
+    checkNote = document.getElementById("inputnote").value;
+    if (checkSubject=="") {
+        document.getElementById("inputsubject").value = "!!Subject is required to save your notes!!";
+        setTimeout(function(){ document.getElementById("inputsubject").value = ""; }, 2500);
+        document.location('workplace.php')
+    }   else if (checkNote=="") {
+                document.getElementById("inputnote").value = "!!No data available!!";
+                setTimeout(function(){ document.getElementById("inputnote").value = ""; }, 2500);
+                document.location('workplace.php');
+        }   else {document.forms["inputNote"].submit();
+                  document.getElementById("inputnote").value = "!!Data saved!!";
+                  setTimeout(function(){ document.getElementById("inputnote").value = ""; }, 3000);      
+            }       
 }
 
 function test(){
