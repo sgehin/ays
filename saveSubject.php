@@ -2,7 +2,6 @@
 include 'database.php';
 
 saveYourSubject();
-saveYourNote();
 
     
      

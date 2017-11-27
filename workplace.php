@@ -37,7 +37,7 @@
                                     <!-- generalbox right -->
                                     <div class="genRightUp">
                                         <div id="trashSubject">
-                                            <i class="fa fa-floppy-o" style="font-size:20px;color:#4286A1"onmouseover="bigSave(this)" onmouseout="normalSave(this)"></i>
+                                            <i class="fa fa-floppy-o" style="font-size:20px;color:#4286A1"onmouseover="bigSave(this)" onmouseout="normalSave(this)" onclick="saveSubject()"></i>
                                             <br><br>
                                         </div>
                                         <div id="saveSubject">
@@ -57,8 +57,8 @@
                                 </div>
                                 <!-- displaybox -->  
                                 <div class="column middle" id="displaybox">
-                                    <textarea type="text" id="inputsubject" name="subject"></textarea>
-                                    <form name="inputNote" action="saveNote.php" method="get">   
+                                    <form name="inputNote" action="saveNote.php" method="get"> 
+                                    <textarea type="text" id="inputsubject" name="subject"></textarea>                                    
                                     <textarea type="text" id="inputnote" name="note" value="deze text moet vervangen worden"></textarea>
                                     </form>
                                 </div>
