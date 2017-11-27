@@ -7,41 +7,52 @@ function saveNote() {
         document.getElementById("inputsubject").value = "!!Subject is required to save your notes!!";
         setTimeout(function () {
             document.getElementById("inputsubject").value = "";
-        }, 2500);
+        }, 1000);
         document.location('workplace.php')
     } else if (checkNote == "") {
         document.getElementById("inputnote").value = "!!No data available!!";
         setTimeout(function () {
             document.getElementById("inputnote").value = "";
-        }, 2500);
+        }, 1000);
         document.location('workplace.php');
     } else { 
         document.forms["inputNote"].submit();
         document.getElementById("inputnote").value = "!!Data saved!!";
         setTimeout(function () {
             document.getElementById("inputnote").value = "";
-        }, 3000);
+        }, 1000);
     }
 }
 
 function saveSubject() {
     var checkSubject
-    checkSubject = document.getElementById("inputnote").value;
+    checkSubject = document.getElementById("inputsubject").value;
     if (checkSubject == "") {
-        document.getElementById("inputnote").value = "!!No data available!!";
+        document.getElementById("inputsubject").value = "!!No data available!!";
         setTimeout(function () {
-            document.getElementById("inputnote").value = "";
-        }, 2500);
+            document.getElementById("inputsubject").value = "";
+        }, 1000);
         document.location('workplace.php')
     } else { console.log();
         document.forms["inputNote"].submit();
-        document.getElementById("inputnote").value = "!!Data saved!!";
+        document.getElementById("inputsubject").value = "!!Data saved!!";
         setTimeout(function () {
-            document.getElementById("inputnote").value = "";
-        }, 3000);
+            document.getElementById("inputsubject").value = "";
+        }, 1000);
+        document.location('workplace.php');
     }
 }
 
+function searchLoop(){
+    var A
+    var searchitem = document.getElementById("searchsubject").value;
+    alert(searchitem);
+    document.getElementById("selectArea").value = searchitem;
+    A = searchSubjectThrewDB(searchitem);
+    alert (A);
+    document.getElementById("selectArea").value = A + searchitem;
+    
+}
 
 function test() {
     var someText = "Hier worden de aantekeningen ingevoerd";

@@ -17,7 +17,7 @@ function saveYourNote($parinsertid) {
     $insertID = $parinsertid;
     $conn = connectDB();
 // MySQL DATETIME format)
-    $myDate = date("Y-m-d H:i:s");
+    $myDate = date("d-m-Y H:i:s");
 // checken of data ingevult is
     if (isset($_GET['note']) and ( $_GET['note'] == '')) {
         
@@ -43,6 +43,20 @@ function saveYourSubject() {
         return $insertID;
         header("Location: workplace.php");
     }
+}
+
+function searchSubjectThrewDB($item){
+    $searchItem = $item;
+    $conn = connectDB();
+    $sql = "SELECT * FROM `subject`";
+    $result = $conn->query($sql);
+    for ($x = 0; $x < $result->num_rows; $x++) {
+                    $huidigeRecord = $result->fetch_assoc();
+                }
+    $conn->close();
+    echo $huidigeRecord;
+    return $huidigeRecord;
+    header("Location: workplace.php");
 }
 
 // check vreemde characters en code
