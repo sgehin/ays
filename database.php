@@ -12,8 +12,9 @@ function connectDB() {
         die($conn->connect_error);
     return $conn;
 }
-
-function saveYourNote() {
+// check note = "" else save note met subject_id
+function saveYourNote($parinsertid) {
+    $insertID = $parinsertid;
     $conn = connectDB();
 // MySQL DATETIME format)
     $myDate = date("Y-m-d H:i:s");
@@ -22,13 +23,13 @@ function saveYourNote() {
         
     } elseif (isset($_REQUEST['note'])) {
         $savecontainer = mysql_fix_string($conn, $_REQUEST['note']);
-        $sql = "INSERT INTO `note`( `note`, `date_id`)VALUES('$savecontainer','$myDate')";
+        $sql = "INSERT INTO `note`( `subject_id`,`note`, `date_id`)VALUES('$insertID','$savecontainer','$myDate')";
         $conn->query($sql);
         $conn->close();
         header("Location: workplace.php");
     }
 }
-
+// check subject = "" else save subject
 function saveYourSubject() {
     $conn = connectDB();
     if (isset($_GET['subject']) and ( $_GET['subject'] == '')) {
@@ -37,7 +38,9 @@ function saveYourSubject() {
         $savecontainer2 = mysql_fix_string($conn, $_REQUEST['subject']);
         $sql = "INSERT INTO `subject`(`subject`)VALUES('$savecontainer2')";
         $conn->query($sql);
+        $insertID = $conn->insert_id;
         $conn->close();
+        return $insertID;
         header("Location: workplace.php");
     }
 }

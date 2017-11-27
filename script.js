@@ -15,7 +15,7 @@ function saveNote() {
             document.getElementById("inputnote").value = "";
         }, 2500);
         document.location('workplace.php');
-    } else {
+    } else { 
         document.forms["inputNote"].submit();
         document.getElementById("inputnote").value = "!!Data saved!!";
         setTimeout(function () {

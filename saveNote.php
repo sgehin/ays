@@ -1,8 +1,8 @@
 <?php
 include 'database.php';
 
-saveYourSubject();
-saveYourNote();
+$insertID = saveYourSubject();
+saveYourNote($insertID);
 
     
      
