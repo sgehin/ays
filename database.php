@@ -1,3 +1,5 @@
+<?php //require 'class.php'; ?>
+
 <?php
 
 // connect to database
@@ -22,7 +24,7 @@ function saveYourNote($parinsertid) {
     if (isset($_GET['note']) and ( $_GET['note'] == '')) {
         
     } elseif (isset($_REQUEST['note'])) {
-        $savecontainer = mysql_fix_string($conn, $_REQUEST['note']);
+        $savecontainer = mysqli_fix_string($conn, $_REQUEST['note']);
         $sql = "INSERT INTO `note`( `subject_id`,`note`, `date_id`)VALUES('$insertID','$savecontainer','$myDate')";
         $conn->query($sql);
         $conn->close();
@@ -31,11 +33,13 @@ function saveYourNote($parinsertid) {
 }
 // check subject = "" else save subject
 function saveYourSubject() {
+    //  $subject = new subject();
+    //  $subject->addsubject();
     $conn = connectDB();
     if (isset($_GET['subject']) and ( $_GET['subject'] == '')) {
         
     } elseif (isset($_REQUEST['subject'])) {
-        $savecontainer2 = mysql_fix_string($conn, $_REQUEST['subject']);
+        $savecontainer2 = mysqli_fix_string($conn, $_REQUEST['subject']);
         $sql = "INSERT INTO `subject`(`subject`)VALUES('$savecontainer2')";
         $conn->query($sql);
         $insertID = $conn->insert_id;
@@ -60,11 +64,11 @@ function searchSubjectThrewDB($item){
 }
 
 // check vreemde characters en code
-function mysql_entities_fix_string($conn, $string) {
+function mysqli_entities_fix_string($conn, $string) {
     return htmlentities(mysql_fix_string($conn, $string));
 }
 
-function mysql_fix_string($conn, $string) {
+function mysqli_fix_string($conn, $string) {
     if (get_magic_quotes_gpc())
         $string = stripcslashes($string);
     return $conn->real_escape_string($string);

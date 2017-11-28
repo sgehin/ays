@@ -140,6 +140,7 @@ input{
     border-radius: 10px; 
     padding: 5px;
     color: white;
+    font-size: 20px;    
 }
 #inputnote{
     height: 77%;
@@ -196,7 +197,7 @@ textarea{
     font-weight: bold;
 }
 #inputnote{
-    height: 427px;
+    height: 454px;
     font-size: 18px;
 }
 /*                              generalbox left */
@@ -240,3 +241,4 @@ textarea{
   float:right;
   width: 5%;
 }
+

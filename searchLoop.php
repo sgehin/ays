@@ -2,7 +2,7 @@
 include 'database.php';
 
 
-function searchSubjectThrewDB($item);
+searchSubjectThrewDB($item);
 
 
     

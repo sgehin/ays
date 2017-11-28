@@ -15,7 +15,7 @@ function saveNote() {
             document.getElementById("inputnote").value = "";
         }, 1000);
         document.location('workplace.php');
-    } else { 
+    } else {
         document.forms["inputNote"].submit();
         document.getElementById("inputnote").value = "!!Data saved!!";
         setTimeout(function () {
@@ -33,7 +33,8 @@ function saveSubject() {
             document.getElementById("inputsubject").value = "";
         }, 1000);
         document.location('workplace.php')
-    } else { console.log();
+    } else {
+        console.log();
         document.forms["inputNote"].submit();
         document.getElementById("inputsubject").value = "!!Data saved!!";
         setTimeout(function () {
@@ -43,16 +44,29 @@ function saveSubject() {
     }
 }
 
-function searchLoop(){
-    var A
-    var searchitem = document.getElementById("searchsubject").value;
-    alert(searchitem);
-    document.getElementById("selectArea").value = searchitem;
-    A = searchSubjectThrewDB(searchitem);
-    alert (A);
-    document.getElementById("selectArea").value = A + searchitem;
-    
-}
+function searchLoop() {
+           
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("selectArea").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "notesearch.php", true);
+  xhttp.send();
+  }
+  
+  function searchsubject() {
+       var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("dropdownn").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "subjectsearch.php", true);
+  xhttp.send();
+  
+  }
 
 function test() {
     var someText = "Hier worden de aantekeningen ingevoerd";
