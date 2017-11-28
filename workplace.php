@@ -24,17 +24,21 @@
                                 <div class="column left" id="generalbox">
                                     <!-- generalbox left -->   
                                     <div class="genLeft">
-                                        <div id="dropdownn" >
-                                        <script>    var xhttp = new XMLHttpRequest();
-                                            xhttp.onreadystatechange = function() {
-                                            if (this.readyState == 4 && this.status == 200) {
-                                            document.getElementById("dropdownn").innerHTML = this.responseText;
-                                            }
-                                            };
-                                            xhttp.open("GET", "subjectsearch.php", true);
-                                            xhttp.send();  
-                                            </script>
-                                        </div>
+                                        <div class="searchResult">
+                                            <div id="dropdownn">
+                                                <select  id="myselect" onchange="selectFunction1()">
+                                                    <script>    var xhttp = new XMLHttpRequest();
+                                                        xhttp.onreadystatechange = function () {
+                                                            if (this.readyState == 4 && this.status == 200) {
+                                                                document.getElementById("myselect").innerHTML = this.responseText;
+                                                            }
+                                                        };
+                                                        xhttp.open("GET", "subjectsearch.php", true);
+                                                        xhttp.send();
+                                                    </script>
+                                                </select>
+                                            </div>
+                                        </div>    
                                     </div>
                                     <!-- generalbox right -->
                                     <div class="genRightUp">
@@ -72,7 +76,10 @@
                                 <input type="text" id="searchsubject" name="subject">
                                 <i class="fa fa-search" id="loop" style="font-size:20px;color:#4286A1" onmouseover="bigLoop(this)" onmouseout="normalLoop(this)" onclick="searchLoop()"></i>
                                 <div class="searchResult">
-                                    <div id="selectArea"> </div>
+                                    <div id="dropdownn">
+                                        <select  id="selectArea" onchange="selectFunction2()">
+                                        </select>
+                                    </div>    
                                 </div>    
                             </div>                                
                             </body>

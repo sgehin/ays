@@ -55,18 +55,7 @@ function searchLoop() {
   xhttp.open("GET", "notesearch.php", true);
   xhttp.send();
   }
-  
-  function searchsubject() {
-       var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("dropdownn").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "subjectsearch.php", true);
-  xhttp.send();
-  
-  }
+
 
 function test() {
     var someText = "Hier worden de aantekeningen ingevoerd";
@@ -93,4 +82,12 @@ function bigSave(x) {
 function normalSave(x) {
     x.style.color = "#4286A1";
 }
-
+// drobdown select function
+function selectFunction1(){
+    var a=document.getElementById("myselect").value;
+    document.getElementById("inputsubject").value = a;
+}
+function selectFunction2(){
+    var a=document.getElementById("selectArea").value;
+    document.getElementById("inputnote").value = a;
+}

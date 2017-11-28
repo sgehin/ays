@@ -35,24 +35,10 @@ class subject{
         $this->subject=$Psubject;
     }
     
-    public function addsubject($Pgetsubject){
+    public function selectdistinct(){
         
-        $conn = connectDB();
-        //error in connect stop instructie
-        if ($conn->connect_error) {
-            die($conn->connect_error);
-        } elseif (isset($_GET['subject']) and ( $_GET['subject'] == '')) {
-        
-        } elseif (isset($_REQUEST['subject'])) {
-            $savecontainer2 = mysql_fix_string($conn, $_REQUEST['subject']);
-            $sql = "INSERT INTO `subject`(`subject`)VALUES('$savecontainer2')";
-            $conn->query($sql);
-            $insertID = $conn->insert_id;
-            $conn->close();
-            return $insertID;
-            header("Location: workplace.php");
-        }
-          
+        $sql = "SELECT DISTINCT subject FROM `subject`;";
+        return $this->$sql;  
     }
     
 }

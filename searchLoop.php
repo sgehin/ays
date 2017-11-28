@@ -1,8 +1,8 @@
 <?php
-include 'database.php';
+//include 'database.php';
 
 
-searchSubjectThrewDB($item);
+//searchSubjectThrewDB($item);
 
 
     

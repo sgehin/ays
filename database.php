@@ -74,4 +74,9 @@ function mysqli_fix_string($conn, $string) {
     return $conn->real_escape_string($string);
 }
 
+function displayselectedsubject(){
+    
+}
+
 ?>
+
