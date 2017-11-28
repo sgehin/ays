@@ -242,3 +242,37 @@ textarea{
   width: 5%;
 }
 
+
+
+
+.myselect{
+                color: orange;
+                border-color: bleu;
+                background-color: lightblue;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-top: 5px;
+                padding-right: 10px;
+                border-radius: 10px;
+                border-style: none;
+                border-width: 5px;
+                max-height: 300px;
+                width: 100%;
+                
+}
+
+#selectArea{
+                color: orange;
+                border-color: bleu;
+                background-color: lightblue;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-top: 5px;
+                padding-right: 10px;
+                border-radius: 10px;
+                border-style: none;
+                border-width: 5px;
+                max-height: 300px;
+                width: 100%;
+                
+}
