@@ -1,3 +1,16 @@
+//function del(){
+//        document.forms["delNote"].submit();
+//        alert ("Do you want to delete this subject?");
+//        document.getElementById("inputsubject").value = "!!Data is deleted!!";
+//        setTimeout(function () {
+//            document.getElementById("inputsubject").value = "";
+//        }, 1000);
+//        document.location('workplace.php');
+//    }
+
+
+
+
 function saveNote() {
     var checkSubject
     var checkNote
@@ -8,7 +21,7 @@ function saveNote() {
         setTimeout(function () {
             document.getElementById("inputsubject").value = "";
         }, 1000);
-        document.location('workplace.php')
+        document.location('workplace.php');
     } else if (checkNote == "") {
         document.getElementById("inputnote").value = "!!No data available!!";
         setTimeout(function () {

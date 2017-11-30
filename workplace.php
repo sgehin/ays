@@ -48,7 +48,7 @@
                                         </div>
                                         <div id="saveSubject">
                                         </div>
-                                        <i class="fa fa-trash" style="font-size:20px;color:#4286A1"onmouseover="bigTrash(this)" onmouseout="normalTrash(this)"></i>
+                                        <i class="fa fa-trash" style="font-size:20px;color:#4286A1"onmouseover="bigTrash(this)" onmouseout="normalTrash(this)" onclick="del()"></i>
                                     </div>
                                     <div class="genRightDn">
                                         <div id="trashSubject">
@@ -63,23 +63,25 @@
                             </div>
                             <!-- displaybox -->  
                             <div class="column middle" id="displaybox">
-                                <form name="inputNote" action="saveNote.php" method="get"> 
-                                    <textarea type="text" id="inputsubject" name="subject"></textarea>                                    
-                                    <textarea type="text" id="inputnote" name="note" value="deze text moet vervangen worden"></textarea>
-                                </form>
+                                <!--<form name="delNote" action="delSubject.php" method="get">  -->
+                                    <form name="inputNote" action="saveNote.php" method="get"> 
+                                        <textarea type="text" id="inputsubject" name="subject"></textarea>                                    
+                                        <textarea type="text" id="inputnote" name="note" value="deze text moet vervangen worden"></textarea>
+                                    </form>
+                                <!-- </form> -->   
                             </div>
                             <!-- searchbox -->  
                             <div class="column right" id="searchbox">
                                 <div name="radiobutton">
                                     <input type="radio" id="radiobuttonNote"><label>notes</label>                  
                                 </div>
-                                <input type="text" id="searchsubject" name="subject">
+                                <input type="text" id="searchsubject" name="subject" onchange>
                                 <i class="fa fa-search" id="loop" style="font-size:20px;color:#4286A1" onmouseover="bigLoop(this)" onmouseout="normalLoop(this)" onclick="searchLoop()"></i>
                                 <div class="searchResult">
                                     <div id="dropdownn">
                                         <select  id="selectArea" onchange="selectFunction2()">
                                         </select>
-                                    </div>    
+                                    </div>   
                                 </div>    
                             </div>                                
                             </body>

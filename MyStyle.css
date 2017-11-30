@@ -241,38 +241,37 @@ textarea{
   float:right;
   width: 5%;
 }
-
-
-
-
+/*                              drobbox */
 .myselect{
-                color: orange;
-                border-color: bleu;
-                background-color: lightblue;
-                padding-bottom: 5px;
-                padding-left: 10px;
-                padding-top: 5px;
-                padding-right: 10px;
-                border-radius: 10px;
-                border-style: none;
-                border-width: 5px;
-                max-height: 300px;
-                width: 100%;
-                
+  color: #0D2144;
+  background-color: lightblue;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-right: 10px;
+  border-radius: 10px;
+  border-style: none;
+  border-width: 5px;
+  max-height: 300px;
+  width: 100%;              
 }
 
 #selectArea{
-                color: orange;
-                border-color: bleu;
-                background-color: lightblue;
-                padding-bottom: 5px;
-                padding-left: 10px;
-                padding-top: 5px;
-                padding-right: 10px;
-                border-radius: 10px;
-                border-style: none;
-                border-width: 5px;
-                max-height: 300px;
-                width: 100%;
-                
+  color: #0D2144;
+  background-color: lightblue;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-right: 10px;
+  border-radius: 10px;
+  border-style: none;
+  border-width: 5px;
+  max-height: 300px;
+  width: 100%;              
+}
+option{
+  background-color: #CFD2B0;
+  border-color: #CFD2B0;
+  width: 50px;
+    
 }

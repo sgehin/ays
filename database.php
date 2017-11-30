@@ -14,7 +14,20 @@ function connectDB() {
         die($conn->connect_error);
     return $conn;
 }
-// check note = "" else save note met subject_id
+//function delYourSubject() {
+//     if (isset($_GET['subject']) and ( $_GET['subject'] == '')) {
+//        
+//    } elseif (isset($_REQUEST['subject'])) {
+//        $savecontainer = mysqli_fix_string($conn, $_REQUEST['subject']);
+//        $sql = "DELETE FROM subject WHERE subject='!!Subject is deleted!!'";
+//        $conn->query($sql);
+//        $conn->close();
+//        header("Location: workplace.php");
+//    }
+//    
+//}
+
+// check if note = "" else save note met subject_id
 function saveYourNote($parinsertid) {
     $insertID = $parinsertid;
     $conn = connectDB();
@@ -31,7 +44,7 @@ function saveYourNote($parinsertid) {
         header("Location: workplace.php");
     }
 }
-// check subject = "" else save subject
+// check if subject = "" else save subject
 function saveYourSubject() {
     //  $subject = new subject();
     //  $subject->addsubject();
@@ -49,19 +62,19 @@ function saveYourSubject() {
     }
 }
 
-function searchSubjectThrewDB($item){
-    $searchItem = $item;
-    $conn = connectDB();
-    $sql = "SELECT * FROM `subject`";
-    $result = $conn->query($sql);
-    for ($x = 0; $x < $result->num_rows; $x++) {
-                    $huidigeRecord = $result->fetch_assoc();
-                }
-    $conn->close();
-    echo $huidigeRecord;
-    return $huidigeRecord;
-    header("Location: workplace.php");
-}
+//function searchSubjectThrewDB($item){
+//    $searchItem = $item;
+//    $conn = connectDB();
+//    $sql = "SELECT * FROM `subject`";
+//    $result = $conn->query($sql);
+//    for ($x = 0; $x < $result->num_rows; $x++) {
+//                    $huidigeRecord = $result->fetch_assoc();
+//                }
+//    $conn->close();
+//    echo $huidigeRecord;
+//    return $huidigeRecord;
+//    header("Location: workplace.php");
+//}
 
 // check vreemde characters en code
 function mysqli_entities_fix_string($conn, $string) {
