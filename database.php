@@ -8,6 +8,10 @@ function connectDB() {
     $databasenaam = 'ays';
     $username = 'root';
     $password = '';
+//        $hostname = 'localhost';
+//    $databasenaam = 'phpzwollegen2';
+//    $username = 'phpzwollegen1';
+//    $password = 'itphtoren';
     $conn = new mysqli($hostname, $username, $password, $databasenaam);
     //error in connect stop instructie
     if ($conn->connect_error)
@@ -38,7 +42,7 @@ function saveYourNote($parinsertid) {
         
     } elseif (isset($_REQUEST['note'])) {
         $savecontainer = mysqli_fix_string($conn, $_REQUEST['note']);
-        $sql = "INSERT INTO `note`( `subject_id`,`note`, `date_id`)VALUES('$insertID','$savecontainer','$myDate')";
+        $sql = "INSERT INTO `sg_note`( `subject_id`,`note`, `date_id`)VALUES('$insertID','$savecontainer','$myDate')";
         $conn->query($sql);
         $conn->close();
         header("Location: workplace.php");
@@ -53,7 +57,7 @@ function saveYourSubject() {
         
     } elseif (isset($_REQUEST['subject'])) {
         $savecontainer2 = mysqli_fix_string($conn, $_REQUEST['subject']);
-        $sql = "INSERT INTO `subject`(`subject`)VALUES('$savecontainer2')";
+        $sql = "sg_INSERT INTO `subject`(`subject`)VALUES('$savecontainer2')";
         $conn->query($sql);
         $insertID = $conn->insert_id;
         $conn->close();

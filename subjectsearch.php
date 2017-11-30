@@ -8,7 +8,7 @@
     $conn = new mysqli($hostname, $username, $password, $databasenaam);
     //$sql = new subject();
     //$sql->selectdistinct();
-    $sql = "SELECT DISTINCT subject FROM `subject`;";
+    $sql = "SELECT DISTINCT subject FROM `sg_subject`;";
     $result = $conn->query($sql);
     
         echo "<option align='center'>select subject</option>";

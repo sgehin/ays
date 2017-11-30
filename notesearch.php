@@ -6,7 +6,7 @@
     $password='';
     
     $conn = new mysqli($hostname, $username, $password, $databasenaam);
-    $sql = "SELECT DISTINCT note FROM `note`;";
+    $sql = "SELECT DISTINCT note FROM `sg_note`;";
     $result = $conn->query($sql);
     
         echo "<option align='center'>select notes</option>";

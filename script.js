@@ -8,7 +8,26 @@
 //        document.location('workplace.php');
 //    }
 
-
+function mutatie(testValue){
+    alert("binnen function mutatie");
+    alert(testValue);
+    var test = document.getElementById("displayForm");
+    var hiddenField = document.getElementById("collect_id");
+    if(testValue=="saveNote"){
+        document.getElementById("collect_id").value = "saveNote";
+        saveNote();
+    } else if(testValue=="delNote"){
+        alert("delNote");
+        document.getElementById("collect_id").value = "delNote";
+    } else if(testValue=="saveSubject"){
+        alert("saveSubject");
+        document.getElementById("collect_id").value = "saveSubject";
+        saveSubject();
+    } else if(testValue=="delSubject"){
+        alert("delSubject");
+        document.getElementById("collect_id").value = "delSubject";
+    }   
+}
 
 
 function saveNote() {

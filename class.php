@@ -37,7 +37,7 @@ class subject{
     
     public function selectdistinct(){
         
-        $sql = "SELECT DISTINCT subject FROM `subject`;";
+        $sql = "SELECT DISTINCT subject FROM `sg_subject`;";
         return $this->$sql;  
     }
     
@@ -111,7 +111,7 @@ class note {
         
         $conn = connectDB();
         $conn = new mysqli($hostname, $username, $password, $databasenaam);
-        $sql = "SELECT * FROM `note`;";
+        $sql = "SELECT * FROM `sg_note`;";
         $result = $conn->query($sql);
         return $result;
     }

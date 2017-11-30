@@ -26,7 +26,7 @@
             // checken of data ingevult is
             if (isset($_REQUEST['Uname']) && isset($_REQUEST['password'])) {
                 // variabele vullen query string om input op te halen van database
-                $sql = "SELECT `id`, `username`, `password` FROM `user` WHERE `username`='" . $testUser . "'";
+                $sql = "SELECT `id`, `username`, `password` FROM `sg_user` WHERE `username`='" . $testUser . "'";
                 $result = $conn->query($sql);            // uitvoeren query string voor ophalen tabel user en resultset in variable zetten
                 for ($x = 0; $x < $result->num_rows; $x++) {
                     $huidigeRecord = $result->fetch_assoc();
@@ -56,9 +56,9 @@
                   printf("%d Row inserted.\n", $stmt->affected_rows);
                   $stmt->close();
                  */
-                $sql = "INSERT INTO `user`(`username`, `password`)VALUES('" . $uname . "','" . $password . "')";
+                $sql = "INSERT INTO `sg_user`(`username`, `password`)VALUES('" . $uname . "','" . $password . "')";
                 $conn->query($sql);
-                $sql2 = "INSERT INTO `personalia`(`Firstname`, `Lastname`,`E-mail`)VALUES('" . $_REQUEST['fname'] . "','" . $_REQUEST['lname'] . "','" . $_REQUEST['usremail'] . "')";
+                $sql2 = "INSERT INTO `sg_personalia`(`Firstname`, `Lastname`,`E-mail`)VALUES('" . $_REQUEST['fname'] . "','" . $_REQUEST['lname'] . "','" . $_REQUEST['usremail'] . "')";
                 $conn->query($sql2);
                 echo "<div class =LogForm2>Account created<div>";
                 $conn->close();

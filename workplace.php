@@ -43,28 +43,28 @@
                                     <!-- generalbox right -->
                                     <div class="genRightUp">
                                         <div id="trashSubject">
-                                            <i class="fa fa-floppy-o" style="font-size:20px;color:#4286A1"onmouseover="bigSave(this)" onmouseout="normalSave(this)" onclick="saveSubject()"></i>
+                                            <i class="fa fa-floppy-o" style="font-size:20px;color:#4286A1"onmouseover="bigSave(this)" onmouseout="normalSave(this)" onclick="mutatie('saveSubject')"></i>
                                             <br><br>
                                         </div>
                                         <div id="saveSubject">
                                         </div>
-                                        <i class="fa fa-trash" style="font-size:20px;color:#4286A1"onmouseover="bigTrash(this)" onmouseout="normalTrash(this)" onclick="del()"></i>
+                                        <i class="fa fa-trash" style="font-size:20px;color:#4286A1"onmouseover="bigTrash(this)" onmouseout="normalTrash(this)" onclick="mutatie('delSubject')"></i>
                                     </div>
                                     <div class="genRightDn">
                                         <div id="trashSubject">
-                                            <i class="fa fa-floppy-o" style="font-size:20px;color:#4286A1"onmouseover="bigSave(this)" onmouseout="normalSave(this)" onclick="saveNote()"></i>
+                                            <i class="fa fa-floppy-o" style="font-size:20px;color:#4286A1"onmouseover="bigSave(this)" onmouseout="normalSave(this)" onclick="mutatie('saveNote')"></i>
                                             <br><br>
                                         </div>
                                         <div id="saveSubject">
                                         </div>
-                                        <i class="fa fa-trash" style="font-size:20px;color:#4286A1"onmouseover="bigTrash(this)" onmouseout="normalTrash(this)"></i>
+                                        <i class="fa fa-trash" style="font-size:20px;color:#4286A1"onmouseover="bigTrash(this)" onmouseout="normalTrash(this)" onclick="mutatie('delNote')"></i>
                                     </div>
                                 </div>    
                             </div>
                             <!-- displaybox -->  
                             <div class="column middle" id="displaybox">
-                                <!--<form name="delNote" action="delSubject.php" method="get">  -->
-                                    <form name="inputNote" action="saveNote.php" method="get"> 
+                                <form name="inputNote" action="transfer.php" id="displayForm" method="get">
+                                        <input name="collect" type="hidden" id="collect_id">
                                         <textarea type="text" id="inputsubject" name="subject"></textarea>                                    
                                         <textarea type="text" id="inputnote" name="note" value="deze text moet vervangen worden"></textarea>
                                     </form>
@@ -84,5 +84,5 @@
                                     </div>   
                                 </div>    
                             </div>                                
-                            </body>
-                            </html>
+    </body>
+</html>

@@ -3,14 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/ays/database.php</file>
+            <file>file:/C:/xampp/htdocs/ays/notesearch.php</file>
             <file>file:/C:/xampp/htdocs/ays/index.php</file>
             <file>file:/C:/xampp/htdocs/ays/saveNote.php</file>
             <file>file:/C:/xampp/htdocs/ays/searchLoop.php</file>
-            <file>file:/C:/xampp/htdocs/ays/MyStyle.css</file>
+            <file>file:/C:/xampp/htdocs/ays/connectDB.php</file>
+            <file>file:/C:/xampp/htdocs/ays/class.php</file>
             <file>file:/C:/xampp/htdocs/ays/script.js</file>
             <file>file:/C:/xampp/htdocs/ays/workplace.php</file>
             <file>file:/C:/xampp/htdocs/ays/saveSubject.php</file>
+            <file>file:/C:/xampp/htdocs/ays/subjectsearch.php</file>
+            <file>file:/C:/xampp/htdocs/ays/database.php</file>
+            <file>file:/C:/xampp/htdocs/ays/general.php</file>
+            <file>file:/C:/xampp/htdocs/ays/MyStyle.css</file>
+            <file>file:/C:/xampp/htdocs/ays/delSubject.php</file>
         </group>
     </open-files>
 </project-private>
