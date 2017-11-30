@@ -11,21 +11,27 @@
 function mutatie(testValue){
     alert("binnen function mutatie");
     alert(testValue);
-    var test = document.getElementById("displayForm");
-    var hiddenField = document.getElementById("collect_id");
-    if(testValue=="saveNote"){
-        document.getElementById("collect_id").value = "saveNote";
-        saveNote();
-    } else if(testValue=="delNote"){
-        alert("delNote");
-        document.getElementById("collect_id").value = "delNote";
-    } else if(testValue=="saveSubject"){
-        alert("saveSubject");
-        document.getElementById("collect_id").value = "saveSubject";
-        saveSubject();
-    } else if(testValue=="delSubject"){
-        alert("delSubject");
-        document.getElementById("collect_id").value = "delSubject";
+    var hiddenField = document.getElementById("collect_id");    
+    switch(testValue){
+        case "saveNote":
+            document.getElementById("collect_id").value = "saveNote";
+            saveNote();
+            break;
+        case "delNote":
+            alert("delNote");
+            document.getElementById("collect_id").value = "delNote";
+            break;
+        case "saveSubject":
+            alert("saveSubject");
+            document.getElementById("collect_id").value = "saveSubject";
+            saveSubject();
+            break;
+        case "delSubject":
+            alert("delSubject");
+            document.getElementById("collect_id").value = "delSubject";
+            break;
+        default:
+            document.localName="workplace.php";
     }   
 }
 
