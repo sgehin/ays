@@ -1,4 +1,5 @@
 
+
 // bij onclick wordt de meegegeven waarde in een verborgen veld met collect_id gestopt en meegezonden
 function mutatie(testValue){
     alert("binnen function mutatie");
@@ -31,7 +32,20 @@ function mutatie(testValue){
 function delSubject() {
     var checkSubject
     checkSubject = document.getElementById("inputsubject").value;
-    document.forms["inputNote"].submit();
+    if (checkSubject == ""){
+        document.getElementById("inputsubject").value = "!!No subject to delete!!";
+        setTimeout(function () {
+            document.getElementById("inputsubject").value = "";
+        }, 1000);
+        document.location('workplace.php');    
+    } else {
+            document.forms["inputNote"].submit();
+            document.getElementById("inputsubject").value = "!!subject delete!!";
+            setTimeout(function () {
+            document.getElementById("inputsubject").value = "";
+            }, 1000);
+        
+        }
     }
 
 

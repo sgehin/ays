@@ -2,43 +2,19 @@
 <?php
 function delYourSubject(){
     $conn = connectDB();
-//    if (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == '')) {
-//        
-//    }elseif (isset($_REQUEST['subject'])) {
+    if (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == '')) {
+        
+    } elseif (isset($_REQUEST['subject'])) {
 //         //$sql = "SELECT DISTINCT subject FROM `sg_subject`;";
 //         $sql = "DELETE FROM `sg_subject` WHERE subject='$_REQUEST['subject']'";
-//        $result = $conn->query($sql);
-//        $conn->close();
-//    }
-    $test = "iig";
-    $sql = "DELETE FROM `sg_subject` WHERE subject='$test'";
+
+    //$test = "iig";
+    $sql = "DELETE FROM `sg_subject` WHERE subject='$_REQUEST[subject]'";
     $result = $conn->query($sql);
     $conn->close();
     header("Location: workplace.php");
-    
+    }
 }
-    
-    
-    
-    //doel pak input stop in variabel
-    // vraagt rij op met query gegevens van variabel
-    // indien query leeg --> niks
-    // anders query delete gegevens
-
-
-
-//function delYourSubject() {
-//     if (isset($_GET['subject']) and ( $_GET['subject'] == '')) {
-//        
-//    } elseif (isset($_REQUEST['subject'])) {
-//        $savecontainer = mysqli_fix_string($conn, $_REQUEST['subject']);
-//        $sql = "DELETE FROM subject WHERE subject='!!Subject is deleted!!'";
-//        $conn->query($sql);
-//        $conn->close();
-//        header("Location: workplace.php");
-//    }
-//    
-//}
 
 // check of note = "" anders opslaan note met subject_id
 function saveYourNote($parinsertid) {

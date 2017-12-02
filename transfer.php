@@ -14,23 +14,10 @@
             break;
         case "saveSubject":
             saveYourSubject();
-            break;
-  
-        
-        
-        
-        
-        
+            break;        
         case "delSubject":
            delYourSubject();
-            break;
-        
-        
-        
-        
-        
-        
-        
+            break;        
         default:     
  }
  
