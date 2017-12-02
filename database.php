@@ -1,9 +1,30 @@
 <?php include 'connectDB.php'?>
 <?php
 function delYourSubject(){
+    $conn = connectDB();
+//    if (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == '')) {
+//        
+//    }elseif (isset($_REQUEST['subject'])) {
+//         //$sql = "SELECT DISTINCT subject FROM `sg_subject`;";
+//         $sql = "DELETE FROM `sg_subject` WHERE subject='$_REQUEST['subject']'";
+//        $result = $conn->query($sql);
+//        $conn->close();
+//    }
+    $test = "iig";
+    $sql = "DELETE FROM `sg_subject` WHERE subject='$test'";
+    $result = $conn->query($sql);
+    $conn->close();
+    header("Location: workplace.php");
     
-    echo "test delYourSubject";
 }
+    
+    
+    
+    //doel pak input stop in variabel
+    // vraagt rij op met query gegevens van variabel
+    // indien query leeg --> niks
+    // anders query delete gegevens
+
 
 
 //function delYourSubject() {
