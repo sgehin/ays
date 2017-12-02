@@ -1,17 +1,9 @@
-//function del(){
-//        document.forms["delNote"].submit();
-//        alert ("Do you want to delete this subject?");
-//        document.getElementById("inputsubject").value = "!!Data is deleted!!";
-//        setTimeout(function () {
-//            document.getElementById("inputsubject").value = "";
-//        }, 1000);
-//        document.location('workplace.php');
-//    }
 
+// bij onclick wordt een waarde meegeven en in een verborgen veld meegegeven 
 function mutatie(testValue){
     alert("binnen function mutatie");
     alert(testValue);
-    var hiddenField = document.getElementById("collect_id");    
+   // var hiddenField = document.getElementById("collect_id");    
     switch(testValue){
         case "saveNote":
             document.getElementById("collect_id").value = "saveNote";
@@ -34,6 +26,14 @@ function mutatie(testValue){
             document.localName="workplace.php";
     }   
 }
+
+function delSubject() {
+    var checkSubject
+    checkSubject = document.getElementById("inputsubject").value;
+    }
+
+
+
 
 
 function saveNote() {
@@ -93,14 +93,19 @@ function searchLoop() {
   xhttp.open("GET", "notesearch.php", true);
   xhttp.send();
   }
+  function searchsubject() {
+       var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("dropdownn").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "subjectsearch.php", true);
+  xhttp.send();
+  
+  }
 
 
-function test() {
-    var someText = "Hier worden de aantekeningen ingevoerd";
-    document.getElementById("selectArea").value = "Subject";
-    document.getElementById("inputsubject").value = "Kijk het werktSubject";
-    document.getElementById("inputnote").value = someText;
-}
 // onmouseover effect for fa fa-icons
 function bigLoop(x) {
     x.style.color = "red";

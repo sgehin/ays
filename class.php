@@ -1,4 +1,4 @@
-<?php require 'connectDB.php'; ?>
+<?php //require 'connectDB.php'; ?>
 
 <?php
 

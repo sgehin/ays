@@ -1,16 +1,9 @@
 <?php //require 'subjectsearch.php'; ?>
+<?php include 'connectDB.php'?>
 <?php
-    $hostname='localhost';
-    $databasenaam='ays';
-    $username='root';
-    $password='';
-    
-    $conn = new mysqli($hostname, $username, $password, $databasenaam);
-    //$sql = new subject();
-    //$sql->selectdistinct();
+    $conn = connectDB();
     $sql = "SELECT DISTINCT subject FROM `sg_subject`;";
     $result = $conn->query($sql);
-    
         echo "<option align='center'>select subject</option>";
     for($x = 0; $x < $result->num_rows; $x++){
         $row = $result->fetch_assoc();

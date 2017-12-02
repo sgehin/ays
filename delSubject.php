@@ -1,5 +1,7 @@
+<?php include 'database.php';
+      include 'connectDB.php'?>
 <?php
-include 'database.php';
+    
 
 //delYourSubject();
 

@@ -1,23 +1,6 @@
-<?php //require 'class.php'; ?>
+<?php include 'connectDB.php'?>
 
 <?php
-
-// connect to database
-function connectDB() {
-    $hostname = 'localhost';
-    $databasenaam = 'ays';
-    $username = 'root';
-    $password = '';
-//        $hostname = 'localhost';
-//    $databasenaam = 'phpzwollegen2';
-//    $username = 'phpzwollegen1';
-//    $password = 'itphtoren';
-    $conn = new mysqli($hostname, $username, $password, $databasenaam);
-    //error in connect stop instructie
-    if ($conn->connect_error)
-        die($conn->connect_error);
-    return $conn;
-}
 //function delYourSubject() {
 //     if (isset($_GET['subject']) and ( $_GET['subject'] == '')) {
 //        
@@ -38,8 +21,7 @@ function saveYourNote($parinsertid) {
 // MySQL DATETIME format)
     $myDate = date("d-m-Y H:i:s");
 // checken of data ingevult is
-    if (isset($_GET['note']) and ( $_GET['note'] == '')) {
-        
+    if (isset($_REQUEST['note']) and ( $_REQUEST['note'] == '')) {    
     } elseif (isset($_REQUEST['note'])) {
         $savecontainer = mysqli_fix_string($conn, $_REQUEST['note']);
         $sql = "INSERT INTO `sg_note`( `subject_id`,`note`, `date_id`)VALUES('$insertID','$savecontainer','$myDate')";
@@ -50,14 +32,12 @@ function saveYourNote($parinsertid) {
 }
 // check if subject = "" else save subject
 function saveYourSubject() {
-    //  $subject = new subject();
-    //  $subject->addsubject();
     $conn = connectDB();
-    if (isset($_GET['subject']) and ( $_GET['subject'] == '')) {
+    if (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == '')) {
         
     } elseif (isset($_REQUEST['subject'])) {
         $savecontainer2 = mysqli_fix_string($conn, $_REQUEST['subject']);
-        $sql = "sg_INSERT INTO `subject`(`subject`)VALUES('$savecontainer2')";
+        $sql = "INSERT INTO `sg_subject`(`subject`)VALUES('$savecontainer2')";
         $conn->query($sql);
         $insertID = $conn->insert_id;
         $conn->close();

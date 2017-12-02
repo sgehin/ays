@@ -1,11 +1,6 @@
-
+<?php include 'connectDB.php'?>
 <?php
-    $hostname='localhost';
-    $databasenaam='ays';
-    $username='root';
-    $password='';
-    
-    $conn = new mysqli($hostname, $username, $password, $databasenaam);
+    $conn = connectDB();
     $sql = "SELECT DISTINCT note FROM `sg_note`;";
     $result = $conn->query($sql);
     
