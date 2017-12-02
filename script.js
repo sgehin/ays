@@ -2,7 +2,6 @@
 
 // bij onclick wordt de meegegeven waarde in een verborgen veld met collect_id gestopt en meegezonden
 function mutatie(testValue){
-    alert("binnen function mutatie");
     switch(testValue){
         case "saveNote":
             document.getElementById("collect_id").value = "saveNote";

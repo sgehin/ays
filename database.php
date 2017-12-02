@@ -42,34 +42,19 @@ function saveYourNote($parinsertid) {
         header("Location: workplace.php");
     }
 }
-
-//// check of subject = "" anders opslaan subject
-//function saveYourSubject() {
-//    $conn = connectDB();
-//    if (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == '')) {
-//        
-//    } elseif (isset($_REQUEST['subject'])) {
-//        $savecontainer2 = mysqli_fix_string($conn, $_REQUEST['subject']);
-//        $sql = "INSERT INTO `sg_subject`(`subject`)VALUES('$savecontainer2')";
-//        $conn->query($sql);
-//        $insertID = $conn->insert_id;
-//        $conn->close();
-//        return $insertID;
-//        header("Location: workplace.php");
-//    }
-//}
 // check of subject = "" check bestaat al update anders opslaan subject
 function saveYourSubject() {
     $conn = connectDB();
-    if (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == '')) { 
+    if (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == '')) {
         header("Location: workplace.php");
-    } elseif (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == checkIfSubjectExist())){
+    } elseif (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == checkIfSubjectExist())) {
         $savecontainer2 = mysqli_fix_string($conn, $_REQUEST['subject']);
-        $sql = "UPDATE sg_subject SET subject='$savecontainer2' WHERE subject='checkIfSubjectExist()';";
+        $sql = "UPDATE sg_subject SET subject='$savecontainer2' WHERE subject='$savecontainer2';";
         $conn->query($sql);
         $conn->close();
-        header("Location: workplace.php");  
-    } elseif (isset($_REQUEST['subject'])){
+        header("Location: workplace.php");
+    } else {
+        (isset($_REQUEST['subject']));
         $savecontainer2 = mysqli_fix_string($conn, $_REQUEST['subject']);
         $sql = "INSERT INTO `sg_subject`(`subject`)VALUES('$savecontainer2')";
         $conn->query($sql);
@@ -79,36 +64,39 @@ function saveYourSubject() {
         header("Location: workplace.php");
     }
 }
+
 //check of input voorkomt in tabel sg_subject in kolom subject en geeft waarde uit kolom subject terug
 function checkIfSubjectExist() {
-        $conn = connectDB();
-    if(isset($_REQUEST['subject'])) {
+    $conn = connectDB();
+    if (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == '')) {
+        header("Location: workplace.php");
+    } elseif (isset($_REQUEST['subject'])) {
         $checkcontainer2 = $_REQUEST['subject'];
         $sql = "SELECT subject FROM sg_subject WHERE subject='$checkcontainer2';";
         $conn->query($sql);
         $result = $conn->query($sql);
         $conn->close();
         for ($x = 0; $x < $result->num_rows; $x++) {
-            $row = $result->fetch_assoc();                  
-        }      
-    }   
- return $row['subject'];
-}    
-
+            $row = $result->fetch_assoc();
+        }
+    }
+    header("Location: workplace.php");
+    return $row['subject'];
+}
 
 // check vreemde characters en code
-    function mysqli_entities_fix_string($conn, $string) {
-        return htmlentities(mysql_fix_string($conn, $string));
-    }
+function mysqli_entities_fix_string($conn, $string) {
+    return htmlentities(mysql_fix_string($conn, $string));
+}
 
-    function mysqli_fix_string($conn, $string) {
-        if (get_magic_quotes_gpc())
-            $string = stripcslashes($string);
-        return $conn->real_escape_string($string);
-    }
+function mysqli_fix_string($conn, $string) {
+    if (get_magic_quotes_gpc())
+        $string = stripcslashes($string);
+    return $conn->real_escape_string($string);
+}
 
-    function displayselectedsubject() {
-        
-    }
-    ?>
+function displayselectedsubject() {
+    
+}
+?>
 
