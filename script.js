@@ -1,9 +1,7 @@
 
-// bij onclick wordt een waarde meegeven en in een verborgen veld meegegeven 
+// bij onclick wordt de meegegeven waarde in een verborgen veld met collect_id gestopt en meegezonden
 function mutatie(testValue){
     alert("binnen function mutatie");
-    alert(testValue);
-   // var hiddenField = document.getElementById("collect_id");    
     switch(testValue){
         case "saveNote":
             document.getElementById("collect_id").value = "saveNote";
@@ -14,14 +12,17 @@ function mutatie(testValue){
             document.getElementById("collect_id").value = "delNote";
             break;
         case "saveSubject":
-            alert("saveSubject");
             document.getElementById("collect_id").value = "saveSubject";
             saveSubject();
             break;
         case "delSubject":
-            alert("delSubject");
             document.getElementById("collect_id").value = "delSubject";
-            break;
+            delSubject();
+            break;    
+            
+            
+            
+
         default:
             document.localName="workplace.php";
     }   
@@ -30,12 +31,14 @@ function mutatie(testValue){
 function delSubject() {
     var checkSubject
     checkSubject = document.getElementById("inputsubject").value;
+    document.forms["inputNote"].submit();
     }
 
 
 
 
-
+//functie checkt of een onderwerp en aantekening in de twee elementen aanwezig zijn. 
+//indien aanwezig wordt de inhoud naar de server gestuurd.
 function saveNote() {
     var checkSubject
     var checkNote
@@ -61,7 +64,8 @@ function saveNote() {
         }, 1000);
     }
 }
-
+//functie checkt of een onderwerp in het elementen aanwezig is.
+//indien aanwezig wordt de inhoud naar de server gestuurd.
 function saveSubject() {
     var checkSubject
     checkSubject = document.getElementById("inputsubject").value;
@@ -81,9 +85,9 @@ function saveSubject() {
         document.location('workplace.php');
     }
 }
-
-function searchLoop() {
-           
+//Met ajaxmethode een verzoek voor "note"verzenden naar de server en het resultaat
+// in een element "selectarea" weergegeven.
+function searchLoop() {       
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -93,8 +97,10 @@ function searchLoop() {
   xhttp.open("GET", "notesearch.php", true);
   xhttp.send();
   }
+//Met ajaxmethode een verzoek voor "subject" verzenden naar de server en het resultaat
+// in een element "dropdownn" weergeven.
   function searchsubject() {
-       var xhttp = new XMLHttpRequest();
+    var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("dropdownn").innerHTML = this.responseText;
@@ -126,10 +132,13 @@ function normalSave(x) {
     x.style.color = "#4286A1";
 }
 // drobdown select function
+
+// neem de waarde van "myselect" en zet het in het element "inputsubject"
 function selectFunction1(){
     var a=document.getElementById("myselect").value;
     document.getElementById("inputsubject").value = a;
 }
+// neem de waarde van "selectArea" en zet het in het element "inputnote"
 function selectFunction2(){
     var a=document.getElementById("selectArea").value;
     document.getElementById("inputnote").value = a;

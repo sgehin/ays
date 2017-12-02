@@ -1,6 +1,11 @@
 <?php include 'connectDB.php'?>
-
 <?php
+function delYourSubject(){
+    
+    echo "test delYourSubject";
+}
+
+
 //function delYourSubject() {
 //     if (isset($_GET['subject']) and ( $_GET['subject'] == '')) {
 //        
@@ -14,7 +19,7 @@
 //    
 //}
 
-// check if note = "" else save note met subject_id
+// check of note = "" anders opslaan note met subject_id
 function saveYourNote($parinsertid) {
     $insertID = $parinsertid;
     $conn = connectDB();
@@ -30,7 +35,7 @@ function saveYourNote($parinsertid) {
         header("Location: workplace.php");
     }
 }
-// check if subject = "" else save subject
+// check of subject = "" anders opslaan subject
 function saveYourSubject() {
     $conn = connectDB();
     if (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == '')) {

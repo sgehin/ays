@@ -40,7 +40,7 @@
                                             </div>
                                         </div>    
                                     </div>
-                                    <!-- generalbox right -->
+                                    <!-- knoppen bij subject-->
                                     <div class="genRightUp">
                                         <div id="trashSubject">
                                             <i class="fa fa-floppy-o" style="font-size:20px;color:#4286A1"onmouseover="bigSave(this)" onmouseout="normalSave(this)" onclick="mutatie('saveSubject')"></i>
@@ -50,6 +50,7 @@
                                         </div>
                                         <i class="fa fa-trash" style="font-size:20px;color:#4286A1"onmouseover="bigTrash(this)" onmouseout="normalTrash(this)" onclick="mutatie('delSubject')"></i>
                                     </div>
+                                    <!-- knoppen bij note-->
                                     <div class="genRightDn">
                                         <div id="trashSubject">
                                             <i class="fa fa-floppy-o" style="font-size:20px;color:#4286A1"onmouseover="bigSave(this)" onmouseout="normalSave(this)" onclick="mutatie('saveNote')"></i>
@@ -70,7 +71,7 @@
                                     </form>
                                 <!-- </form> -->   
                             </div>
-                            <!-- searchbox -->  
+                            <!-- notebox -->  
                             <div class="column right" id="searchbox">
                                 <div name="radiobutton">
                                     <input type="radio" id="radiobuttonNote"><label>notes</label>                  
