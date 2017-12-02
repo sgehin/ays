@@ -1,18 +1,25 @@
-<?php include 'connectDB.php'?>
+<?php include 'connectDB.php' ?>
 <?php
-function delYourSubject(){
-    $conn = connectDB();
-    if (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == '')) {
-        
-    } elseif (isset($_REQUEST['subject'])) {
-//         //$sql = "SELECT DISTINCT subject FROM `sg_subject`;";
-//         $sql = "DELETE FROM `sg_subject` WHERE subject='$_REQUEST['subject']'";
 
-    //$test = "iig";
-    $sql = "DELETE FROM `sg_subject` WHERE subject='$_REQUEST[subject]'";
-    $result = $conn->query($sql);
-    $conn->close();
-    header("Location: workplace.php");
+function delYourSubject() {
+    $conn = connectDB();
+    if (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == '')) {   
+    } elseif (isset($_REQUEST['subject'])) {
+        $sql = "DELETE FROM `sg_subject` WHERE subject='$_REQUEST[subject]'";
+        $result = $conn->query($sql);
+        $conn->close();
+        header("Location: workplace.php");
+    }
+}
+
+function delYourNote() {
+    $conn = connectDB();
+    if (isset($_REQUEST['note']) and ( $_REQUEST['note'] == '')) {    
+    } elseif (isset($_REQUEST['note'])) {
+        $sql = "DELETE FROM `sg_note` WHERE note='$_REQUEST[note]'";
+        $result = $conn->query($sql);
+        $conn->close();
+        header("Location: workplace.php");
     }
 }
 
@@ -23,7 +30,8 @@ function saveYourNote($parinsertid) {
 // MySQL DATETIME format)
     $myDate = date("d-m-Y H:i:s");
 // checken of data ingevult is
-    if (isset($_REQUEST['note']) and ( $_REQUEST['note'] == '')) {    
+    if (isset($_REQUEST['note']) and ( $_REQUEST['note'] == '')) {
+        
     } elseif (isset($_REQUEST['note'])) {
         $savecontainer = mysqli_fix_string($conn, $_REQUEST['note']);
         $sql = "INSERT INTO `sg_note`( `subject_id`,`note`, `date_id`)VALUES('$insertID','$savecontainer','$myDate')";
@@ -32,6 +40,7 @@ function saveYourNote($parinsertid) {
         header("Location: workplace.php");
     }
 }
+
 // check of subject = "" anders opslaan subject
 function saveYourSubject() {
     $conn = connectDB();
@@ -61,7 +70,6 @@ function saveYourSubject() {
 //    return $huidigeRecord;
 //    header("Location: workplace.php");
 //}
-
 // check vreemde characters en code
 function mysqli_entities_fix_string($conn, $string) {
     return htmlentities(mysql_fix_string($conn, $string));
@@ -73,9 +81,8 @@ function mysqli_fix_string($conn, $string) {
     return $conn->real_escape_string($string);
 }
 
-function displayselectedsubject(){
+function displayselectedsubject() {
     
 }
-
 ?>
 

@@ -11,6 +11,7 @@ function mutatie(testValue){
         case "delNote":
             alert("delNote");
             document.getElementById("collect_id").value = "delNote";
+            delNote();
             break;
         case "saveSubject":
             document.getElementById("collect_id").value = "saveSubject";
@@ -19,11 +20,7 @@ function mutatie(testValue){
         case "delSubject":
             document.getElementById("collect_id").value = "delSubject";
             delSubject();
-            break;    
-            
-            
-            
-
+            break;
         default:
             document.localName="workplace.php";
     }   
@@ -48,6 +45,24 @@ function delSubject() {
         }
     }
 
+function delNote() {
+    var checkNote
+    checkNote = document.getElementById("inputnote").value;
+    if (checkNote == ""){
+        document.getElementById("inputnote").value = "!!no note to delete!!";
+        setTimeout(function () {
+            document.getElementById("inputnote").value = "";
+        }, 1000);
+        document.location('workplace.php');    
+    } else {
+            document.forms["inputNote"].submit();
+            document.getElementById("inputnote").value = "!!note delete!!";
+            setTimeout(function () {
+            document.getElementById("inputnote").value = "";
+            }, 1000);
+        
+        }
+    }
 
 
 

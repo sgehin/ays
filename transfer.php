@@ -10,7 +10,7 @@
             saveYourNote($insertID);   
             break;
         case "delNote":
-            echo "delNote";
+            delYourNote();
             break;
         case "saveSubject":
             saveYourSubject();
