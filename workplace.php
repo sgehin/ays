@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -66,15 +67,17 @@
                             <div class="column middle" id="displaybox">
                                 <form name="inputNote" action="transfer.php" id="displayForm" method="get">
                                         <input name="collect" type="hidden" id="collect_id">
-                                        <textarea type="text" id="inputsubject" name="subject"></textarea>                                    
-                                        <textarea type="text" id="inputnote" name="note" value="deze text moet vervangen worden"></textarea>
+                                        <textarea type="text" id="inputsubject" name="subject" placeholder="Fill in subject"></textarea>                                    
+                                        <textarea type="text" id="inputnote" name="note" value="deze text moet vervangen worden" placeholder="Fill in note"></textarea>
                                     </form>
                                 <!-- </form> -->   
                             </div>
                             <!-- notebox -->  
                             <div class="column right" id="searchbox">
-                                <div name="radiobutton">
-                                    <input type="radio" id="radiobuttonNote"><label>notes</label>                  
+                                <div name="radiobutton"> 
+                                    <form name="radio" action="test.php" id="radio_id" method="get">
+                                    <input name="radioNote" type="radio" id="radiobuttonNote" onclick="mutatie('radioButtonNote')"><label>notes</label>
+                                    </form>
                                 </div>
                                 <input type="text" id="searchsubject" name="subject" onchange>
                                 <i class="fa fa-search" id="loop" style="font-size:20px;color:#4286A1" onmouseover="bigLoop(this)" onmouseout="normalLoop(this)" onclick="searchLoop()"></i>

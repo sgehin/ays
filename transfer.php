@@ -1,21 +1,22 @@
 <?php include 'database.php'; ?>
 <?php
+session_start();
 // toetsen van van de waarde  afkomstig van de knoppen en verwijzen naar de juiste functies
- $collect = $_REQUEST['collect'];
- //echo $collect;
+ $collect = $_REQUEST['collect'].$_SESSION['apllicationMode'];
+ echo $collect;
  
  switch($collect){
-     case "saveNote":
+     case "saveNoteradioNote":
             $insertID = saveYourSubject();
             saveYourNote($insertID);   
             break;
-        case "delNote":
+        case "delNoteradioNote":
             delYourNote();
             break;
-        case "saveSubject":
+        case "saveSubjectradioNote":
             saveYourSubject();
             break;        
-        case "delSubject":
+        case "delSubjectradioNote":
            delYourSubject();
             break;        
         default:     

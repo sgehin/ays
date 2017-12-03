@@ -16,14 +16,21 @@ function mutatie(testValue){
             document.getElementById("collect_id").value = "saveSubject";
             saveSubject();
             break;
-        case "delSubject":
-            document.getElementById("collect_id").value = "delSubject";
-            delSubject();
+        
+        case "radioButtonNote":
+            document.getElementById("radiobuttonNote").value = "radioNote";
+            radioNote();
             break;
         default:
             document.localName="workplace.php";
     }   
 }
+
+function radioNote() {
+    document.forms["radio"].submit();
+    document.location('test.php');
+}
+
 
 function delSubject() {
     var checkSubject
@@ -110,7 +117,6 @@ function saveSubject() {
         setTimeout(function () {
             document.getElementById("inputsubject").value = "";
         }, 1000);
-        document.location('workplace.php');
     }
 }
 //Met ajaxmethode een verzoek voor "note"verzenden naar de server en het resultaat

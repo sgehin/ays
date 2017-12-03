@@ -12,9 +12,9 @@ function connectDB() {
 //    $password = 'itphtoren';
     
     $conn = new mysqli($hostname, $username, $password, $databasenaam);
-    //error in connect stop instructie
+    //checkt de connectie en geeft null terug bij geen fout anders string met beschrijving fout 
     if ($conn->connect_error)
-        die($conn->connect_error);
+        die($conn->connect_error);// print bericht en verlaat script.
     return $conn;
 }      
 ?>        
