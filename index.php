@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<?php include 'general.php'; ?>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="notes">
         <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-        <meta name="author" content="John Doe">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="img/inlogpic.png">
         <link rel="stylesheet" type="text/css" href="MyStyle.css">

@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,14 +28,14 @@
                                         <div class="searchResult">
                                             <div id="dropdownn">
                                                 <select  class="myselect" id="myselect" onchange="selectFunction1()">
-                                                    <script>    var xhttp = new XMLHttpRequest();
-                                                        xhttp.onreadystatechange = function () {
+                                                    <script>    var xhttp = new XMLHttpRequest(); //innitieer nieuw object 
+                                                        xhttp.onreadystatechange = function () {  // oproepen functie als de status veranderd.
                                                             if (this.readyState == 4 && this.status == 200) {
-                                                                document.getElementById("myselect").innerHTML = this.responseText;
+                                                               document.getElementById("myselect").innerHTML = this.responseText; // return data als string
                                                             }
-                                                        };
-                                                        xhttp.open("GET", "subjectsearch.php", true);
-                                                        xhttp.send();
+                                                       };
+                                                        xhttp.open("GET", "subjectsearch.php", true); //speciveer methode, locatie van de file, true=async
+                                                        xhttp.send();// verstuur verzoek naar webserver.
                                                     </script>
                                                 </select>
                                             </div>
@@ -75,11 +75,9 @@
                             <!-- notebox -->  
                             <div class="column right" id="searchbox">
                                 <div name="radiobutton"> 
-                                    <form name="radio" action="test.php" id="radio_id" method="get">
-                                    <input name="radioNote" type="radio" id="radiobuttonNote" onclick="mutatie('radioButtonNote')"><label>notes</label>
-                                    </form>
+                                    <input name="radioNote" type="radio" id="radiobuttonNote"><label>notes</label>
                                 </div>
-                                <input type="text" id="searchsubject" name="subject" onchange>
+                                <input type="text" id="searchsubject" name="subject" >
                                 <i class="fa fa-search" id="loop" style="font-size:20px;color:#4286A1" onmouseover="bigLoop(this)" onmouseout="normalLoop(this)" onclick="searchLoop()"></i>
                                 <div class="searchResult">
                                     <div id="dropdownn">

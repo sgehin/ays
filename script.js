@@ -16,20 +16,17 @@ function mutatie(testValue){
             document.getElementById("collect_id").value = "saveSubject";
             saveSubject();
             break;
-        
-        case "radioButtonNote":
-            document.getElementById("radiobuttonNote").value = "radioNote";
-            radioNote();
+        case "delSubject":
+            alert("delSubject");
+            document.getElementById("collect_id").value = "delSubject";
+            delSubject();
             break;
         default:
             document.localName="workplace.php";
     }   
 }
 
-function radioNote() {
-    document.forms["radio"].submit();
-    document.location('test.php');
-}
+
 
 
 function delSubject() {
@@ -121,28 +118,32 @@ function saveSubject() {
 }
 //Met ajaxmethode een verzoek voor "note"verzenden naar de server en het resultaat
 // in een element "selectarea" weergegeven.
-function searchLoop() {       
+function searchLoop() {
+    var phpPagWijzer = document.getElementById("searchsubject").value;
+    var pagina;
+    if(phpPagWijzer!=''){
+        pagina = "notesearch2.php?q=";  
+    }else {pagina = "notesearch.php";}
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("selectArea").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "notesearch.php", true);
+  xhttp.open("GET",pagina+phpPagWijzer, true);
   xhttp.send();
   }
 //Met ajaxmethode een verzoek voor "subject" verzenden naar de server en het resultaat
-// in een element "dropdownn" weergeven.
+// in een element "myselect" weergeven.
   function searchsubject() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("dropdownn").innerHTML = this.responseText;
+      document.getElementById("myselect").innerHTML = this.responseText;
     }
   };
   xhttp.open("GET", "subjectsearch.php", true);
   xhttp.send();
-  
   }
 
 
