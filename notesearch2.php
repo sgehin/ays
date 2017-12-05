@@ -12,8 +12,5 @@ for($x = 0; $x < $result->num_rows; $x++){
     echo $row['note'];
     echo "</option>";
     } 
-
-//"SELECT subject FROM sg_subject WHERE subject='$checkcontainer2';";
-
 ?>
      

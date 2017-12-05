@@ -1,10 +1,7 @@
 <?php include 'database.php'; ?>
 <?php
-
 // toetsen van van de waarde  afkomstig van de knoppen en verwijzen naar de juiste functies
  $collect = $_REQUEST['collect'];
- echo $collect;
- 
  switch($collect){
      case "saveNote":
             $insertID = saveYourSubject();
@@ -21,6 +18,4 @@
             break;        
         default:     
  }
- 
- 
  ?>

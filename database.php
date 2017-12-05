@@ -1,6 +1,5 @@
 <?php include 'connectDB.php' ?>
 <?php
-
 function delYourSubject() {
     $conn = connectDB();
     if (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == '')) {     
@@ -41,7 +40,7 @@ function saveYourNote($parinsertid) {
 }
 // check of subject = "" check bestaat al update anders opslaan subject
 function saveYourSubject() {
-    $conn = connectDB();
+    $conn = connectDB();                
     if (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == '')) {
         header("Location: workplace.php");
     } elseif (isset($_REQUEST['subject']) and ( $_REQUEST['subject'] == checkIfSubjectExist())) {
@@ -77,8 +76,6 @@ function checkIfSubjectExist() {
     }
     header("Location: workplace.php");
     return $row['subject'];
-}
-function displayselectedsubject() {    
 }
 ?>
 

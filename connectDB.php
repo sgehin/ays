@@ -1,16 +1,13 @@
 <?php
-
 function connectDB() {
     $hostname = 'localhost';
     $databasenaam = 'ays';
     $username = 'root';
-    $password = '';
-    
-//        $hostname = 'localhost';
+    $password = '';   
+//    $hostname = 'localhost';
 //    $databasenaam = 'phpzwollegen2';
 //    $username = 'phpzwollegen1';
-//    $password = 'itphtoren';
-    
+//    $password = 'itphtoren';   
     $conn = new mysqli($hostname, $username, $password, $databasenaam);
     //checkt de connectie en geeft null terug bij geen fout anders string met beschrijving fout 
     if ($conn->connect_error)

@@ -1,5 +1,4 @@
 
-
 // bij onclick wordt de meegegeven waarde in een verborgen veld met collect_id gestopt en meegezonden
 function mutatie(testValue){
     switch(testValue){
@@ -8,7 +7,6 @@ function mutatie(testValue){
             saveNote();
             break;
         case "delNote":
-            alert("delNote");
             document.getElementById("collect_id").value = "delNote";
             delNote();
             break;
@@ -17,7 +15,6 @@ function mutatie(testValue){
             saveSubject();
             break;
         case "delSubject":
-            alert("delSubject");
             document.getElementById("collect_id").value = "delSubject";
             delSubject();
             break;
@@ -25,10 +22,6 @@ function mutatie(testValue){
             document.localName="workplace.php";
     }   
 }
-
-
-
-
 function delSubject() {
     var checkSubject
     checkSubject = document.getElementById("inputsubject").value;
@@ -47,7 +40,6 @@ function delSubject() {
         
         }
     }
-
 function delNote() {
     var checkNote
     checkNote = document.getElementById("inputnote").value;
@@ -66,9 +58,6 @@ function delNote() {
         
         }
     }
-
-
-
 //functie checkt of een onderwerp en aantekening in de twee elementen aanwezig zijn. 
 //indien aanwezig wordt de inhoud naar de server gestuurd.
 function saveNote() {
@@ -108,7 +97,6 @@ function saveSubject() {
         }, 1000);
         document.location('workplace.php')
     } else {
-        console.log();
         document.forms["inputNote"].submit();
         document.getElementById("inputsubject").value = "!!Data saved!!";
         setTimeout(function () {
@@ -145,8 +133,6 @@ function searchLoop() {
   xhttp.open("GET", "subjectsearch.php", true);
   xhttp.send();
   }
-
-
 // onmouseover effect for fa fa-icons
 function bigLoop(x) {
     x.style.color = "red";
@@ -167,7 +153,6 @@ function normalSave(x) {
     x.style.color = "#4286A1";
 }
 // drobdown select function
-
 // neem de waarde van "myselect" en zet het in het element "inputsubject"
 function selectFunction1(){
     var a=document.getElementById("myselect").value;

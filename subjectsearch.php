@@ -10,8 +10,6 @@
         echo "<option>";
         echo $row['subject'];        
         echo "</option>";
-    }
-   
-        
+    }      
 ?>
      

@@ -31,9 +31,9 @@
                                                     <script>    var xhttp = new XMLHttpRequest(); //innitieer nieuw object 
                                                         xhttp.onreadystatechange = function () {  // oproepen functie als de status veranderd.
                                                             if (this.readyState == 4 && this.status == 200) {
-                                                               document.getElementById("myselect").innerHTML = this.responseText; // return data als string
+                                                                document.getElementById("myselect").innerHTML = this.responseText; // return data als string
                                                             }
-                                                       };
+                                                        };
                                                         xhttp.open("GET", "subjectsearch.php", true); //speciveer methode, locatie van de file, true=async
                                                         xhttp.send();// verstuur verzoek naar webserver.
                                                     </script>
@@ -66,10 +66,10 @@
                             <!-- displaybox -->  
                             <div class="column middle" id="displaybox">
                                 <form name="inputNote" action="transfer.php" id="displayForm" method="get">
-                                        <input name="collect" type="hidden" id="collect_id">
-                                        <textarea type="text" id="inputsubject" name="subject" placeholder="Fill in subject"></textarea>                                    
-                                        <textarea type="text" id="inputnote" name="note" value="deze text moet vervangen worden" placeholder="Fill in note"></textarea>
-                                    </form>
+                                    <input name="collect" type="hidden" id="collect_id">
+                                    <textarea type="text" id="inputsubject" name="subject" placeholder="Fill in subject"></textarea>                                    
+                                    <textarea type="text" id="inputnote" name="note" value="deze text moet vervangen worden" placeholder="Fill in note"></textarea>
+                                </form>
                                 <!-- </form> -->   
                             </div>
                             <!-- notebox -->  
@@ -85,6 +85,9 @@
                                         </select>
                                     </div>   
                                 </div>    
-                            </div>                                
-    </body>
-</html>
+                            </div>
+                            <div class="footer">
+                                <p>ITPH Academy</p>
+                            </div>
+                            </body>
+                            </html>

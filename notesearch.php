@@ -10,6 +10,6 @@ for($x = 0; $x < $result->num_rows; $x++){
     echo "<option>";
     echo $row['note'];
     echo "</option>";
-    }      
+}      
 ?>
      
